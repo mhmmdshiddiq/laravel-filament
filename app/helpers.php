@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Book;
+use App\Models\Partner;
 use App\Models\Setting;
 
 function get_setting_value($key)
@@ -18,4 +19,10 @@ function get_book_data($key){
     if(isset($data)){
         return $data;
     }
+
+}
+
+function get_partner(){
+    $data = Partner::all();
+    return $data;
 }
